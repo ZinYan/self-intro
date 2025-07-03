@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+:root{
+    --color-header2 : #093FB4;
+    --color-header3 : #074799;
+    --color-paragraph : #648DB3;
+    --color-skillLevel : #9FB3DF;
+}
 
 body {
     font-family: 'Ownglyph_meetme-Rg', sans-serif;
@@ -16,16 +22,16 @@ body {
 .container {
     width: calc(100vw - 80px);
     height: calc(100vh - 80px);
-    background-color: #F5EFE7;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    background-color: #F5EFE7;
     border-radius: 10px;
 }
 
-/* Left Container */
+/* Left Section */
 .left_container {
     width: 35%;
     padding: 30px;
@@ -37,25 +43,43 @@ body {
 
 .profile-photo {
     border-radius: 50%;
+    border: solid #213555 10px;
     width: 200px;
     height: 200px;
-    border: solid #213555 10px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-/* Right Container */
+.left_container h2, .left_container h3, .left_container p {
+    margin: 10px 3px;
+}
+
+.left_container h2 {
+    color: var(--color-header2);
+}
+
+.left_container h3 {
+    color: var(--color-header3);
+}
+
+.left_container p {
+    color: var(--color-paragraph);
+    font-size: 20px;
+}
+
+/* Right Section */
 .right_container {
     width: 65%;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap; 
-    overflow: scroll;  
+    flex-wrap: wrap;
+    overflow: scroll;
 }
 
 .right_container section {
     background-color: white;
     padding: 30px 60px;
+    margin-right: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: calc(100% - 120px);
@@ -65,6 +89,18 @@ body {
     justify-content: space-around;
 }
 
+.right_container section h2 {
+    color: var(--color-header2);
+}
+
+.right_container section ul {
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* right_section > skills */
 .skill {
     margin-bottom: 10px;
 }
@@ -75,7 +111,7 @@ body {
 }
 
 .skill-level {
-    background-color: #E195AB;
+    background-color: var(--color-skillLevel);
     height: 30px;
     line-height: 30px;
     color: white;
@@ -83,3 +119,7 @@ body {
     padding-right: 10px;
     box-sizing: border-box;
 }
+
+
+
+
